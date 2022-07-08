@@ -1,0 +1,21 @@
+{
+  "name": "promise_land",
+  "version": "1.0.0",
+  "description": "刘玉新的数字花园",
+  "main": "index.js",
+  "repository": "liuyu.xin",
+  "author": "刘玉新",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.4",
+    "vue": "^3.2.37"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "markdown-it-katex": "^2.0.3"
+  }
+}
