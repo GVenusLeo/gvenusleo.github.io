@@ -99,7 +99,8 @@ export default {
     appearance: true,
     base: '/',
     ignoreDeadLinks: true,
-    lastUpdated: true,
+    lastUpdated: false,
+    // lastUpdatedText: '更新于',
     head: [
         ['link', {
             rel: 'icon',
@@ -125,7 +126,6 @@ export default {
             message: 'Licensed under the MIT License',
             copyright: 'Copyright © 2022 刘玉新'
         },
-        lastUpdatedText: '更新于',
         nav: [{
                 text: '关于',
                 link: '/about'

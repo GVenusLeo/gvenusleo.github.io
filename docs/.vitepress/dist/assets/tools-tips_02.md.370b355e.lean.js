@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as s,a}from"./app.7c685d75.js";const u=JSON.parse('{"title":"otf \u8F6C ttf","description":"","frontmatter":{},"headers":[],"relativePath":"tools-tips/02.md","lastUpdated":null}'),n={name:"tools-tips/02.md"},o=a("",4),p=[o];function c(l,r,d,i,_,f){return s(),t("div",null,p)}var h=e(n,[["render",c]]);export{u as __pageData,h as default};
