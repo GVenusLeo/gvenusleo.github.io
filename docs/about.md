@@ -11,7 +11,7 @@
 - 已成年的 00 后，老家贵州，现在北京
 - 想成为独立开发者的在读医学生
 - 活跃在即刻：[刘玉新](https://m.okjike.com/users/561f7160-d58c-4156-ab66-a103c9955e52)
-- 了解我的更多信息：[数字名片](https://muselink.cc/gvenusleo)
+- 联系我：[数字名片](https://muselink.cc/gvenusleo)
 
 ## 关于本站
 
