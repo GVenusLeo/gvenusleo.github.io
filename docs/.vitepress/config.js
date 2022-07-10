@@ -95,7 +95,7 @@ export default {
     lang: 'zh-CN',
     title: '应许之地',
     titleTemplate: '刘玉新的数字花园',
-    description: '刘玉新的数字花园',
+    description: 'Blog、CS、ML、Math',
     appearance: true,
     base: '/',
     ignoreDeadLinks: true,
@@ -131,7 +131,7 @@ export default {
                 link: '/about'
             },
             {
-                text: '博客',
+                text: '我的博客',
                 link: '/blog/'
             },
             {
