@@ -292,6 +292,10 @@ export default {
                     {
                         text: '02 - 数列的极限',
                         link: '/mathematics/02'
+                    },
+                    {
+                        text: '03 - 函数的极限',
+                        link: '/mathematics/03'
                     }
                 ]
             }]
