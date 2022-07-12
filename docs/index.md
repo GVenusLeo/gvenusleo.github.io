@@ -9,7 +9,7 @@ hero:
       text: 关注我
       link: https://m.okjike.com/users/561f7160-d58c-4156-ab66-a103c9955e52
     - theme: alt
-      text: 了解我
+      text: 联系我
       link: https://muselink.cc/gvenusleo
 features:
   - icon:
