@@ -235,6 +235,10 @@ export default {
                     {
                         text: '02 - NumPy (2)',
                         link: '/data-analysis/02'
+                    },
+                    {
+                        text: '03 - NumPy (3)',
+                        link: '/data-analysis/03'
                     }
                 ]
             }],
