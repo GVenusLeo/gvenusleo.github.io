@@ -139,16 +139,12 @@ export default {
                 link: '/tools-tips/'
             },
             {
-                text: 'Python 基础',
-                link: '/python-language/'
+                text: '机器学习',
+                link: '/machine-learning/'
             },
             {
-                text: '数据分析',
-                link: '/data-analysis/'
-            },
-            {
-                text: 'C 程序设计',
-                link: '/c-language/'
+                text: '408 考研',
+                link: '/408/'
             },
             {
                 text: '高等数学',
@@ -159,8 +155,7 @@ export default {
             '/blog/': [{
                 text: '2022 年',
                 collapsible: true,
-                items: [
-                    {
+                items: [{
                         text: '理性决策、曼德拉效应',
                         link: '/blog/220619'
                     },
@@ -182,7 +177,7 @@ export default {
                     }
                 ]
             }],
-            '/tools-tips': [{
+            '/tools-tips/': [{
                 text: '工具与技巧',
                 items: [{
                         text: 'Git 规范',
@@ -194,95 +189,102 @@ export default {
                     }
                 ]
             }],
-            'python-language': [{
-                text: 'Python 基础',
-                items: [{
-                        text: '01 - 数据结构',
-                        link: '/python-language/01'
-                    },
-                    {
-                        text: '02 - 函数',
-                        link: '/python-language/02'
-                    },
-                    {
-                        text: '03 - 常用内置模块',
-                        link: '/python-language/03'
-                    },
-                    {
-                        text: '04 - 面向对象',
-                        link: '/python-language/04'
-                    },
-                    {
-                        text: '05 - 生成器与迭代器',
-                        link: '/python-language/05'
-                    },
-                    {
-                        text: '06 - 文件与目录操作',
-                        link: '/python-language/06'
-                    },
-                    {
-                        text: '07 - 异常处理',
-                        link: '/python-language/07'
-                    },
-                ]
-            }],
-            'data-analysis': [{
-                text: '数据分析',
-                items: [{
+            '/machine-learning/': [{
+                    text: 'Python 基础',
+                    collapsible: true,
+                    items: [{
+                            text: '01 - 数据结构',
+                            link: '/machine-learning/python-language01'
+                        },
+                        {
+                            text: '02 - 函数',
+                            link: '/machine-learning/python-language02'
+                        },
+                        {
+                            text: '03 - 常用内置模块',
+                            link: '/machine-learning/python-language03'
+                        },
+                        {
+                            text: '04 - 面向对象',
+                            link: '/machine-learning/python-language04'
+                        },
+                        {
+                            text: '05 - 生成器与迭代器',
+                            link: '/machine-learning/python-language05'
+                        },
+                        {
+                            text: '06 - 文件与目录操作',
+                            link: '/machine-learning/python-language06'
+                        },
+                        {
+                            text: '07 - 异常处理',
+                            link: '/machine-learning/python-language07'
+                        },
+                    ]
+                },
+                {
+                    text: '数据分析',
+                    collapsible: true,
+                    items: [{
                         text: '01 - NumPy (1)',
-                        link: '/data-analysis/01'
+                        link: '/machine-learning/data-analysis01'
                     },
                     {
                         text: '02 - NumPy (2)',
-                        link: '/data-analysis/02'
+                        link: '/machine-learning/data-analysis02'
                     },
                     {
                         text: '03 - NumPy (3)',
-                        link: '/data-analysis/03'
-                    }
-                ]
-            }],
-            'c-language': [{
+                        link: '/machine-learning/data-analysis03'
+                    },
+                    {
+                        text: '04 - Pandas (1)',
+                        link: '/machine-learning/data-analysis04'
+                    }]
+                }
+            ],
+            '/408/': [{
                 text: 'C 程序设计',
+                collapsible: true,
                 items: [{
                         text: '01 - C 语言导论',
-                        link: '/c-language/01'
+                        link: '/408/c-language01'
                     },
                     {
                         text: '02 - 数据结构',
-                        link: '/c-language/02'
+                        link: '/408/c-language02'
                     },
                     {
                         text: '03 - 输入与输出',
-                        link: '/c-language/03'
+                        link: '/408/c-language03'
                     },
                     {
                         text: '04 - 选择语句',
-                        link: '/c-language/04'
+                        link: '/408/c-language04'
                     },
                     {
                         text: '05 - 循环语句',
-                        link: '/c-language/05'
+                        link: '/408/c-language05'
                     },
                     {
                         text: '06 - 数组',
-                        link: '/c-language/06'
+                        link: '/408/c-language06'
                     },
                     {
                         text: '07 - 函数',
-                        link: '/c-language/07'
+                        link: '/408/c-language07'
                     },
                     {
                         text: '08 - 指针',
-                        link: '/c-language/08'
+                        link: '/408/c-language08'
                     },
                     {
                         text: '09 - 自定义数据类型',
-                        link: '/c-language/09'
+                        link: '/408/c-language09'
                     },
                     {
                         text: '10 - 文件操作',
-                        link: '/c-language/10'
+                        link: '/408/c-language10'
                     }
                 ]
             }],
