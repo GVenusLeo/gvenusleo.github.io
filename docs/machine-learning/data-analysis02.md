@@ -166,7 +166,7 @@ print(result5)
 - `axis=1`：表示从水平方向进行约减。
 - `axis=None`：表示所有维度都会被约减。
 
-![N维数组约减方向](/img/data-analysis-02.png)
+![N维数组约减方向](/img/da02.png)
 
 ```python
 import numpy as np

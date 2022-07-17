@@ -4,7 +4,7 @@
 
 前面提到，对两个 NumPy 数组实施加减乘除等运算需要两个数组的形状相同。实际上，NumPy 具有智能填充的功能，当两个数组形状不一样时，可扩充较小数组中的元素来匹配较大数组的形状，这种机制称为“**广播**(broadcasting)”，也称为张量自动扩展，是一种轻量级的张量复制手段。
 
-![NumPy 中的广播机制](/img/data-analysis-03-01.jpg)
+![NumPy 中的广播机制](/img/da03-01.jpg)
 
 对于大部分场景，广播机制仅仅在逻辑上改变了张量的尺寸，只待实际需要时才真正实现张量的赋值和扩展。这种优化流程节省了大量计算资源，并由计算框架(如 NumPy)隐式完成。
 
@@ -135,7 +135,7 @@ print(a[a > 5])
 
 有时需要将不同的 NumPy 数组通过**堆叠**操作拼接为一个新的较大数组。堆叠方式大致分为水平方向堆叠(horizontal stack)、垂直方向堆叠(vertical stack)、深度方向堆叠(depth-wise stack)等。
 
-![NumPy 中数组堆叠方向类比](/img/data-analysis-03-02.jpg)
+![NumPy 中数组堆叠方向类比](/img/da03-02.jpg)
 
 除此之外，堆叠函数还包括 `concatenate()`、`column_stack()`、`row_stack()` 等。
 
