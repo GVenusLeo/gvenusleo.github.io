@@ -135,10 +135,6 @@ export default {
                 link: '/blog/'
             },
             {
-                text: '工具与技巧',
-                link: '/tools-tips/'
-            },
-            {
                 text: '机器学习',
                 link: '/machine-learning/'
             },
@@ -149,6 +145,10 @@ export default {
             {
                 text: '高等数学',
                 link: '/mathematics/'
+            },
+            {
+                text: '工具与技巧',
+                link: '/tools-tips/'
             }
         ],
         sidebar: {
@@ -174,18 +174,6 @@ export default {
                     {
                         text: '自我主义与集体主义',
                         link: '/blog/220507'
-                    }
-                ]
-            }],
-            '/tools-tips/': [{
-                text: '工具与技巧',
-                items: [{
-                        text: 'Git 规范',
-                        link: '/tools-tips/01'
-                    },
-                    {
-                        text: 'otf 转 ttf',
-                        link: '/tools-tips/02'
                     }
                 ]
             }],
@@ -226,21 +214,26 @@ export default {
                     text: '数据分析',
                     collapsible: true,
                     items: [{
-                        text: '01 - NumPy (1)',
-                        link: '/machine-learning/data-analysis01'
-                    },
-                    {
-                        text: '02 - NumPy (2)',
-                        link: '/machine-learning/data-analysis02'
-                    },
-                    {
-                        text: '03 - NumPy (3)',
-                        link: '/machine-learning/data-analysis03'
-                    },
-                    {
-                        text: '04 - Pandas (1)',
-                        link: '/machine-learning/data-analysis04'
-                    }]
+                            text: '01 - NumPy (1)',
+                            link: '/machine-learning/data-analysis01'
+                        },
+                        {
+                            text: '02 - NumPy (2)',
+                            link: '/machine-learning/data-analysis02'
+                        },
+                        {
+                            text: '03 - NumPy (3)',
+                            link: '/machine-learning/data-analysis03'
+                        },
+                        {
+                            text: '04 - Pandas (1)',
+                            link: '/machine-learning/data-analysis04'
+                        },
+                        {
+                            text: '05 - Pandas (2)',
+                            link: '/machine-learning/data-analysis05'
+                        }
+                    ]
                 }
             ],
             '/408/': [{
@@ -304,7 +297,30 @@ export default {
                         link: '/mathematics/03'
                     }
                 ]
-            }]
+            }],
+            '/tools-tips/': [{
+                    text: '工具',
+                    collapsible: true,
+                    items: [{
+                            text: '01 - 笔记软件推荐',
+                            link: '/tools-tips/tools01'
+                        }
+                    ]
+                },
+                {
+                    text: '技巧',
+                    collapsible: true,
+                    items: [{
+                            text: '01 - Git 规范',
+                            link: '/tools-tips/tips01'
+                        },
+                        {
+                            text: '02 - otf 转 ttf',
+                            link: '/tools-tips/tips02'
+                        }
+                    ]
+                }
+            ],
 
         },
     },
