@@ -268,7 +268,7 @@ import numpy as np
 np.random.seed(1)                       # 定义随机种子
 print(np.random.rand(2, 3))             # 生成 2x3 随机数组，服从均匀分布
 print(np.random.randn(2, 3))            # 生成 2x3 随机数组，服从标准正态分布
-print(np.random.randint(1, 10, (2, 3))) # 生成 [1,10) 的 2x3 随机数组
+print(np.random.randint(1, 10, (2, 3))) # 生成 [1,10) 的 2x3 随机整数数组
 print(np.random.random((2, 3)))         # 生成 [0,1) 的 2x3 随机数组
 
 # [[4.17022005e-01 7.20324493e-01 1.14374817e-04]

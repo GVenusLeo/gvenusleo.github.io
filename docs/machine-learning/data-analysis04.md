@@ -14,6 +14,8 @@ import pandas as pd
 
 ## 一、Series 的创建
 
+### 1. 创建 Series
+
 **Series** 是一种类似于一维数组的数据结构，是由一组数据及与之对应的标签(即索引)构成的。创建 Series 的语法非常简单：
 
 ```python
@@ -75,10 +77,37 @@ print(a)
 # c    3
 # d    4
 # dtype: int64
+```
 
 Series 与字典也有不同之处：字典是一种无序的数据类型，而 Series 是有序的；Series的索引和值之间是相互独立的；Series 的索引可变的，而字典的键不可变。
 
-Series 还提供了简单的统计方法 `describe()` 用于以列为单位进行统计分析：
+### 2. name 属性
+
+除了 `index` 和 `values` 外，Series 还有 `name` 和 `index.name` 属性。`name` 可以理解为数值列的名称。如果把 `index` 也理解为一个特殊索引列的话，那么 `index.name` 就是这个索引列的名称。
+
+`name` 属性多用在 Pandas 另外一个常见的数据结构 DataFrame 中，DataFrame 可视为多个 Series 对象的组合。
+
+默认情况下，`name` 与 `index.name` 都被设置为 None。在特定场合下，我们也可以通过如下代码进行修改：
+
+```python
+import pandas as pd
+
+a = pd.Series([23, 45, 67, 89])
+a.name = '长度'
+a.index.name = '标签'
+print(a)
+
+# 标签
+# 0    23
+# 1    45
+# 2    67
+# 3    89
+# Name: 长度, dtype: int64
+```
+
+### 3. 简单统计分析
+
+Series 还提供了简单的统计方法 `describe()` 用于以列为单位进行简单的**统计分析**：
 
 ```python
 import pandas as pd
@@ -99,4 +128,169 @@ print(a.describe())
 ```
 
 ## 二、Series 中的数据访问
+
+可以通过**索引**或者**标签**访问、修改 Series 中的数值，甚至可以按任意顺序访问多个索引或标签对应的值：
+
+```python
+import pandas as pd
+
+a = {'a': 1, 'b': 2, 'c': 3, 'd': 4}
+a = pd.Series(a)
+a[0] = 99
+print(a[['a', 'd']])
+
+# a    99
+# d     4
+# dtype: int64
+```
+
+需要注意：如果同时访问多个标签对应的数值，那么这多个索引或标签需要以列表的形式出现。
+
+## 三、Series 中的向量化操作与布尔索引
+
+### 1. 向量化操作
+
+类似于 NumPy，Pandas 中的数据结构也支持广播操作。
+
+```python
+import pandas as pd
+
+a = pd.Series([1, 2, 3])
+print(a*2)
+
+# 0    2
+# 1    4
+# 2    6
+# dtype: int64
+```
+
+::: tip 注意
+任何 NaN ( Not a Number，即空置)参与的计算，返回的结果依然是 NaN。
+:::
+
+还可以实施向量化的加法操作：
+
+```python
+import pandas as pd
+
+a = pd.Series([1, 2, 3])
+print(a + a)                # 等价于 a*2
+```
+
+### 2. 布尔索引
+
+类似于 NumPy，Pandas 也支持利用布尔表达式提取符合条件的值：
+
+```python
+import pandas as pd
+
+a = pd.Series([1, 2, 3, 4])
+print(a > a.median())       # a 中元素与中位数比较
+print(a[a > a.median()])
+
+# 0    False
+# 1    False
+# 2     True
+# 3     True
+# dtype: bool
+# 2    3
+# 3    4
+# dtype: int64
+```
+
+Series 对象也可以作为 NumPy 函数的一个参数：
+
+```python
+import pandas as pd
+import numpy as np
+
+a = pd.Series(np.random.randint(1, 10, (4,)))
+print(a)
+print(np.square(a))
+
+# 0    8
+# 1    4
+# 2    2
+# 3    7
+# dtype: int64
+# 0    64
+# 1    16
+# 2     4
+# 3    49
+# dtype: int64
+```
+
+## 四、Series 中的切片
+
+可通过索引切片选取或处理 Series 中一个或多个值，其返回的依然是 Series 对象：
+
+```python
+import pandas as pd
+
+a = pd.Series([1, 2, 3, 4])
+print(a[1:3])
+
+# 1    2
+# 2    3
+# dtype: int64
+```
+
+## 五、Series 中的缺失值
+
+在处理数据时，经常会遇到一些缺失值，Pandas 对缺失值的处理十分友好，们可以使用 NumPy 中的 `numpy.nan` 来创建一个缺失值，在 Pandas 中，缺失值用 NaN ( Not a Number，非数字)来表示。可以使用 Pandas 中的 `isnull()` 和 `notnull()` 两个方法来检测数据中是否含有缺失值。
+
+```python
+import pandas as pd
+import numpy as np
+
+a = pd.Series(np.array([2, 4, 6, np.nan]))
+print(a[a.isnull() == True])
+
+# 3   NaN
+# dtype: float64
+```
+
+## 六、Series 中的数据的修改
+
+### 1. 删除数据
+
+使用 Pandas 中的 `drop()` 方法可以删除一条或多条数据，该操作是在原 Series 对象的一个视图上进行的，并不会改变原 Series 对象，如果想直接删除 Series 中的数据，可以启用 `drop()` 方法中的 `inplace` 参数：
+
+```python
+import pandas as pd
+
+a = pd.Series([1, 2, 3, 4])
+a.drop([0, 2])
+print(a)
+a.drop([0, 2], inplace=True)
+print(a)
+
+# 0    1
+# 1    2
+# 2    3
+# 3    4
+# dtype: int64
+# 1    2
+# 3    4
+# dtype: int64
+```
+
+### 2. 修改和添加数据
+
+与字典类似，可以直接通过索引向 Series 对象修改和添加数据：
+
+```python
+import pandas as pd
+
+a = pd.Series([1, 3, 5])
+a[3] = 7
+a[0] = 0
+print(a)
+
+# 0    0
+# 1    3
+# 2    5
+# 3    7
+# dtype: int64
+```
 
