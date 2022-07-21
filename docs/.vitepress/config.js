@@ -177,65 +177,6 @@ export default {
                     }
                 ]
             }],
-            '/machine-learning/': [{
-                    text: 'Python 基础',
-                    collapsible: true,
-                    items: [{
-                            text: '01 - 数据结构',
-                            link: '/machine-learning/python-language01'
-                        },
-                        {
-                            text: '02 - 函数',
-                            link: '/machine-learning/python-language02'
-                        },
-                        {
-                            text: '03 - 常用内置模块',
-                            link: '/machine-learning/python-language03'
-                        },
-                        {
-                            text: '04 - 面向对象',
-                            link: '/machine-learning/python-language04'
-                        },
-                        {
-                            text: '05 - 生成器与迭代器',
-                            link: '/machine-learning/python-language05'
-                        },
-                        {
-                            text: '06 - 文件与目录操作',
-                            link: '/machine-learning/python-language06'
-                        },
-                        {
-                            text: '07 - 异常处理',
-                            link: '/machine-learning/python-language07'
-                        },
-                    ]
-                },
-                {
-                    text: '数据分析',
-                    collapsible: true,
-                    items: [{
-                            text: '01 - NumPy (1)',
-                            link: '/machine-learning/data-analysis01'
-                        },
-                        {
-                            text: '02 - NumPy (2)',
-                            link: '/machine-learning/data-analysis02'
-                        },
-                        {
-                            text: '03 - NumPy (3)',
-                            link: '/machine-learning/data-analysis03'
-                        },
-                        {
-                            text: '04 - Pandas (1)',
-                            link: '/machine-learning/data-analysis04'
-                        },
-                        {
-                            text: '05 - Pandas (2)',
-                            link: '/machine-learning/data-analysis05'
-                        }
-                    ]
-                }
-            ],
             '/408/': [{
                 text: 'C 程序设计',
                 collapsible: true,
